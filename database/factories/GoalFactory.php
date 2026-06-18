@@ -1,0 +1,26 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Goal>
+ */
+class GoalFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'name' => 'Gol de ' . fake()->firstName(),
+            'description' => fake()->sentence(),
+            'player_id' => \App\Models\Player::factory(),
+            'game_id' => \App\Models\Game::factory(),
+        ];
+    }
+}

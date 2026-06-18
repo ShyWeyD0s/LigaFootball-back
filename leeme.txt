@@ -1,0 +1,2 @@
+url del servidor en marcha de la api (servidor)
+http://api.ligafootball.test:8000/api/
