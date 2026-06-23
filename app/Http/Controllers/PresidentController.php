@@ -19,7 +19,7 @@ class PresidentController extends Controller
         return response()->json($item, 201);
     }
 
-    public function show($id)
+    public function show($id) //presidente: mostrar un presidente por id
     {
         $item = President::find($id);
         if (!$item) return response()->json(['message' => 'Not found'], 404);
