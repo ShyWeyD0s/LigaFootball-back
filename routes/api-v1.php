@@ -86,30 +86,22 @@ Route::delete('/games/{id}', [GameController::class, 'destroy'])->name('api.v1.g
 
 //index de teamGames
 Route::get('/teamGames', 
-    [TeamGameController::class, 'index']
-);
+    [TeamGameController::class, 'index'])->name('api.v1.teamGames.index');
 //store de teamGames
 Route::post('/teamGames', 
-    [TeamGameController::class, 'store']
-);
+    [TeamGameController::class, 'store'])->name('api.v1.teamGames.store');
 Route::put('/teamGames/{id}', 
-    [TeamGameController::class, 'update']
-);
+    [TeamGameController::class, 'update'])->name('api.v1.teamGames.update');
 Route::delete('/teamGames/{id}', 
-    [TeamGameController::class, 'destroy']
-);
+    [TeamGameController::class, 'destroy'])->name('api.v1.teamGames.destroy');
 
 // crud de /goals
 Route::get('/goals', 
-    [GoalController::class, 'index']
-);
+    [GoalController::class, 'index'])->name('api.v1.goals.index');
 Route::post('/goals', 
-    [GoalController::class, 'store']
-);
+    [GoalController::class, 'store'])->name('api.v1.goals.store');
 Route::put('/goals/{id}', 
-    [GoalController::class, 'update']
-);
+    [GoalController::class, 'update'])->name('api.v1.goals.update');
 Route::delete('/goals/{id}', 
-    [GoalController::class, 'destroy']
-);
+    [GoalController::class, 'destroy'])->name('api.v1.goals.destroy');
 
